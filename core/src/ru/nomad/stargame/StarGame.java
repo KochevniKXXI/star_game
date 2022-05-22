@@ -1,12 +1,12 @@
 package ru.nomad.stargame;
 
-import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 
-public class StarGame extends ApplicationAdapter {
+public class StarGame extends Game {
     public static boolean isAndroid = false;
 	SpriteBatch batch;
     Background background;
@@ -15,6 +15,8 @@ public class StarGame extends ApplicationAdapter {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
+		ScreenManager.getInstance().init(this);
+		ScreenManager.getInstance().switchScreen(ScreenManager.ScreenType.MENU);
         background = new Background();
         hero = new Hero();
         for (int i = 0; i < 4; i++) {
@@ -61,13 +63,14 @@ public class StarGame extends ApplicationAdapter {
 				asteroid.velocity.mulAdd(acc, -20);
 			}
 		}
-		for (Bullet bullet : BulletEmitter.getInstance().bullets) {
-			if (bullet.active) {
-				for (Asteroid asteroid : AsteroidEmitter.getInstance().asteroids) {
-					if (asteroid.hitArea.contains(bullet.position)) {
-						asteroid.takeDamage(50);
-						bullet.destroy();
+		for (Bullet bullet : BulletEmitter.getInstance().activeBullets) {
+			for (Asteroid asteroid : AsteroidEmitter.getInstance().asteroids) {
+				if (asteroid.hitArea.contains(bullet.position)) {
+					if (asteroid.takeDamage(50)) {
+						AsteroidEmitter.getInstance().asteroids.remove(asteroid);
+						break;
 					}
+					bullet.destroy();
 				}
 			}
 		}

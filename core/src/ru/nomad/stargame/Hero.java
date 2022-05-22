@@ -131,11 +131,6 @@ public class Hero {
 
     // Метод, который выстреливает пулю
     public void fire() {
-        for (Bullet bullet : BulletEmitter.getInstance().bullets) {
-            if (!bullet.active) {
-                bullet.setup(position.x, position.y, 400 * (float) cos(angle), 400 * (float) sin(angle));
-                break;
-            }
-        }
+        BulletEmitter.getInstance().setupBullet(position, angle);
     }
 }

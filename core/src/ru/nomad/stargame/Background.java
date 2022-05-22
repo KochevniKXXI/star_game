@@ -61,10 +61,8 @@ public class Background {
     }
 
     public void dispose() {
-//        texture.dispose();
         for (Texture textureSt : texturesStars) {
             textureSt.dispose();
         }
-//        texturesStars.dispose();
     }
 }

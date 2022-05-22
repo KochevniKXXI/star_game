@@ -1,0 +1,138 @@
+
+stargame.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+asteroid
+  rotate: false
+  xy: 1, 121
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ship
+  rotate: false
+  xy: 1, 55
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+bullet
+  rotate: false
+  xy: 259, 345
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+star1
+  rotate: false
+  xy: 1, 37
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star10
+  rotate: false
+  xy: 67, 103
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star11
+  rotate: false
+  xy: 259, 327
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star12
+  rotate: false
+  xy: 293, 361
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star13
+  rotate: false
+  xy: 1, 19
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star14
+  rotate: false
+  xy: 19, 37
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star15
+  rotate: false
+  xy: 67, 85
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star16
+  rotate: false
+  xy: 85, 103
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star2
+  rotate: false
+  xy: 259, 309
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star3
+  rotate: false
+  xy: 311, 361
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star4
+  rotate: false
+  xy: 1, 1
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star5
+  rotate: false
+  xy: 19, 19
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star6
+  rotate: false
+  xy: 37, 37
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star7
+  rotate: false
+  xy: 67, 67
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star8
+  rotate: false
+  xy: 85, 85
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
+star9
+  rotate: false
+  xy: 103, 103
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1

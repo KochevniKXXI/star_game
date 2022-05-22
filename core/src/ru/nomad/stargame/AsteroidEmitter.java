@@ -4,6 +4,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 
 import java.util.ArrayList;
+import java.util.Vector;
 
 public class AsteroidEmitter {
     private static final AsteroidEmitter ourInstance = new AsteroidEmitter();
@@ -30,9 +31,7 @@ public class AsteroidEmitter {
 
     public void render(SpriteBatch batch) {
         for (Asteroid asteroid : asteroids) {
-            if (!asteroid.takeDamage(0)) {
-                asteroid.render(batch);
-            }
+            asteroid.render(batch);
         }
     }
 }
